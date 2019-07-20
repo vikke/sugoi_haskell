@@ -81,7 +81,6 @@ let lostNumbers = [4,8,15,16,23,42]
 ---
 
 * 連結
-
 ```
 *Main> 'a':"bcd"
 "abcd"
