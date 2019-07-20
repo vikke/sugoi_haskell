@@ -92,6 +92,7 @@ let lostNumbers = [4,8,15,16,23,42]
 * 2つ目のリストの先頭に1つめの要素を追加するのは軽い処理となる。
 
 ---
+```
 *Main> [1, 2, 3] ++ 4
 
 <interactive>:22:1: error:
@@ -99,6 +100,7 @@ let lostNumbers = [4,8,15,16,23,42]
       (Use FlexibleContexts to permit this)
     • When checking the inferred type
         it :: forall a. (Num a, Num [a]) => [a]
+```
 ---
 * `[1, 2, 3]` というリストと結合するには数字のリストである必要があるので、
   `[1, 2, 3] ++ [4]` である必要がある。
