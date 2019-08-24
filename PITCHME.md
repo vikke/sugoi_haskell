@@ -345,6 +345,7 @@ removeNonUppercase st = [c | c <- st, c `elem` ['A'..'Z']]
 エラー
 ```
 
+---
 
 #### ペア
 
@@ -356,6 +357,8 @@ Prelude> fst (1, "aa")
 Prelude> snd (1, "aa")
 "aa"
 ```
+
+---
 
 #### zip
 
@@ -370,6 +373,8 @@ Prelude> zip [1,2,3,4,5] ["a", "b", "c"]
 [(1,"a"),(2,"b"),(3,"c")]
 ```
 
+---
+
 #### 直角三角形を見付ける
 
 * 3辺の長さはすべて整数
@@ -381,6 +386,8 @@ let rightTriangles = [(a, b, c) | c <- [1..10], a <- [1..c], b <- [1..a], a^2 + 
 rightTriangles 
 [(8,6,10)]
 ```
+
+---
 
 ## 型を信じろ!
 
@@ -396,6 +403,8 @@ addThree x y z = x + y + z
 :t addThree
 addThree :: Int -> Int -> Int -> Int
 ```
+
+---
 
 ### 型変数
 
