@@ -440,5 +440,40 @@ head :: [a] -> a
 ```
 
 * この例の型宣言は、「等値性関数は、同じ型の任意の2 つの引数を取り、Bool を返す。引数の2 つの値の型はEq クラスのインスタンスでなければならない」と読める。
+* 型クラスはオブジェクト指向のクラスとは別物。
+
+---
+
+代表的な型
+
+Eq, Ord, Show, Read, Enum, Bounded, Num, Floating, Integral, 
+
+---
+#### 型注釈
+
+* readをそのまま使うと型が推論出来ずエラーとなる。
+* **::** で型を指定出来る。
+
+```
+Prelude> read "4"
+*** Exception: Prelude.read: no parse
+
+Prelude> read "4" + 5
+9
+
+Prelude> read "4"::Int
+4
+```
+`
+---
+
+Trueをそのままだと,Booleanか文字列か判断が効かないが、リストの中に入れれば他の値より推論出来るので、大丈夫。
+
+```
+Prelude> read "True"
+*** Exception: Prelude.read: no parse
+Prelude> [read "True", False, True, False]
+[True,False,True,False]
+```
 
 
